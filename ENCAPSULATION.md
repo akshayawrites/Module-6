@@ -26,14 +26,30 @@ To write a Python program to create a class `Student` with the private members `
 ### PROGRAM
 
 ```
-
-
-
+class Student:
+    def __init__(self, name, roll_no, age):
+        self.name = name
+        self.__roll_no = roll_no
+        self.__age = age
+    def show(self):
+        print('Student Details:', self.name, self.__roll_no)
+    def get_roll_no(self):
+        return self.__roll_no
+    def set_roll_no(self, number):
+        if number > 50:
+            print('Invalid roll no. Please set correct roll number')
+        else:
+            self.__roll_no = number
+jessa = Student('Jessa', 10, 15)
+jessa.show()
+jessa.set_roll_no(120)
+jessa.set_roll_no(25)
+jessa.show()
 ```
 
 ### OUTPUT
-
-
+<img width="1182" height="238" alt="image" src="https://github.com/user-attachments/assets/e9762b71-875b-4e7f-a184-d745f4395054" />
 ### RESULT
+Therefore, the output is the example to write a Python program to create a class Student with the private members name and age, and add getter and setter methods to initialize and modify the age variable.
 
 
